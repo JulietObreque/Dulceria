@@ -10,7 +10,9 @@ section {
     padding-left: 15%;
     padding-right: 15%;
 }
-
+.bg-registro{
+    height: 100vh;
+}
 .card {
     box-shadow: 0 0 5px 0 rgba(22, 22, 26, .25);
 }

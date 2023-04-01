@@ -14,22 +14,71 @@ section{
 .card-title{
     font-weight: 600;
 }
-#l-footer{
-    list-style: none;
-    margin-top: 1%;
-}
-li{
-    margin-right: 100px;
-    font-weight: 500;
-}
-footer{
-    background-color: #EF3340;
-    color: white;
-    width: 100%;
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-bottom: 1%;
+.hr1{
+    width: 49%;
     float: left;
+}
+.heart{
+    color: #CE0F69;
+    width: 1%;
+    float:left;
+    margin: 0%;
+}
+.hr2{
+    width: 50%;
+    float: left;
+}
+.us{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.row-us{
+    width: 100%;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
+}
+.row-us .left{
+    overflow: hidden;
+}
+.row-us .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row-us .right{
+    display: flex;
+    align-items: center;
+}
+.row-us .right .content-us{
+    padding-left: 20px;
+
+}
+.row-us .right .content-us .p-us{
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 2%;
+}
+@media (max-width: 991px){
+    .row-us .right .content-us{
+        padding-left: 0px;
+    
+    }
+}
+@media (max-width: 768px){
+    .row-us{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+#titulo-us{
+    font-family: 'Yeseva One', cursive;
+}
+.link-color{
+    text-decoration-color: #CE0F69;
+    color: #CE0F69;
 }
 .boxtitulo{
     padding-top: 8%;
@@ -42,17 +91,80 @@ footer{
     text-align: center;
     font-weight: 600;
 }
-.img-nosotros{
-    width: 50%;
-    float: left;
-}
+
 .mas-vendidos{
     float: left;
 }
-.p-nosotros{
-    width: 50%;
-    padding: 5px;
-    padding-left: 10px;
-    text-align: justify;
+.contenedor-footer{
+    background-color: #EF3340;
+    color: white;
+    width: 100%;
+    padding-left: 2%;
+    padding-bottom: 1%;
     float: left;
 }
+.titulo-footer{
+    text-align: center;
+    margin-bottom: 1%;
+}
+.footer-basic {
+    padding:40px 0;
+    background-color:#EF3340;
+    color:white;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+  
+  

@@ -43,8 +43,16 @@ footer{
     font-weight: 600;
 }
 .img-nosotros{
+    width: 50%;
     float: left;
 }
 .mas-vendidos{
+    float: left;
+}
+.p-nosotros{
+    width: 50%;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: justify;
     float: left;
 }

@@ -36,7 +36,7 @@
 
 
 .bodylogin{
-    background-image: url(../img/backgroun2.png);
+    background-image: url(../img/background2.png);
     background-repeat: no-repeat;
     background-size: fixed;
 }
@@ -182,5 +182,21 @@
 }
 
 
+nav,
+.offcanvas {
+  background-color: #1e293b;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
 
+@media (max-width: 768px) {
+  .navbar-nav > li:hover {
+    background-color: #0dcaf0;
+  }
+}
 

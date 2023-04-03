@@ -409,6 +409,8 @@ section {
     float: left;
 }
 
+
+
 .contenedor-footer {
     background-color: #EF3340;
     color: white;
@@ -1152,4 +1154,11 @@ section {
         font-size: 14px;
     }
 
+}
+
+
+
+#titulo-carrito{
+    text-align: center;
+    
 }

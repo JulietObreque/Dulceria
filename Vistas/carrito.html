@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="icon" href="../img/icono.png">
   <title>𝐂𝐡𝐞𝐫𝐫𝐲 𝐯𝐢𝐧𝐞</title>
@@ -47,79 +50,95 @@
               <a class="nav-link" href="#ancla-contacto">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Vistas/productos.html">Productos</a>
+              <a class="nav-link" href="productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Vistas/login.html">Iniciar Sesión</a>
+              <a class="nav-link" href="login.html">Iniciar Sesión</a>
             </li>
-            <li><a class="nav-link" href="/Vistas/carrito.html">Carrito</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="carrito.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+          </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 <section>
-<div>
-  <h2 id="titulo-carrito">Tus productos</h2>
+    
+<div class="small-container cart-page">
+    <table class="table-cart">
+        <tr>
+            <th class="th-cart">Productos</th>
+            <th class="th-cart">Cantidad</th>
+            <th class="th-cart">Subtotal</th>
+        </tr>
+        <tr>
+            <td class="td-cart">
+                <div class="cart-info">
+                    <img src="../img/cards-productos/tableton.jpg" alt="">
+                    <div>
+                        <p>Tabletón</p>
+                        <small>$3.200</small>
+                        <br>
+                        <a href="" style="text-decoration: none;">Eliminar</a>
+                    </div>
+                </div>
+            </td>
+            <td class="td-cart"><input type="number" value="1"></td>
+            <td class="td-cart">$3.200</td>
+        </tr>
+        <tr>
+            <td class="td-cart">
+                <div class="cart-info">
+                    <img src="../img/cards-productos/gansito.jpg" alt="">
+                    <div>
+                        <p>Gansito</p>
+                        <small>$600</small>
+                        <br>
+                        <a href="" style="text-decoration: none;">Eliminar</a>
+                    </div>
+                </div>
+            </td>
+            <td class="td-cart"><input type="number" value="1"></td>
+            <td class="td-cart">$600</td>
+        </tr>
+        <tr>
+            <td class="td-cart">
+                <div class="cart-info">
+                    <img src="../img/cards-productos/dr-pepper.jpg" alt="">
+                    <div>
+                        <p>Dr. Pepper</p>
+                        <small>$1.000</small>
+                        <br>
+                        <a href="" style="text-decoration: none;">Eliminar</a>
+                    </div>
+                </div>
+            </td>
+            <td class="td-cart"><input type="number" value="1"></td>
+            <td class="td-cart">$1.000</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table class="table-cart">
+            <tr>
+                <td class="td-cart">Valor Neto</td>
+                <td class="td-cart">$4.034</td>
+            </tr>
+            <tr>
+                <td class="td-cart">IVA</td>
+                <td class="td-cart">$766</td>
+            </tr>
+            <tr>
+                <td class="td-cart">Total</td>
+                <td class="td-cart">$4.800</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="btn mt-auto align-self-start"
+                    style="background-color: #CE0F69; color: white;">Pagar</a></td>
+            </tr>
+        </table>
+    </div>
 </div>
-<div class="container">
-  <div class="cards-carrito">
-    <div class="row">
-      
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-          <div class="card">
-              <img src="../img/cards-productos/bon-o-bon.jpg" class="card-img-top" alt="Card Image">
-              <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Caja Bon o Bon
-                  </h5>
-                  <p class="card-text mb-4">
-                  <ul>
-                      <b><li>$3.600</li></b>
-                      <li>270 grs</li>
-                  </ul>
-                  </p>
-                  
-              </div>
-          </div>
-      </div>
-      
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-          <div class="card">
-              <img src="../img/cards-productos/frugele.jpg" class="card-img-top" alt="Card Image">
-              <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Frugelé</h5>
-                  <p class="card-text mb-4">
-                  <ul>
-                      <b><li>$1.600</li></b>
-                      <li>430 grs</li>
-                  </ul>
-                  </p>
-                 
-              </div>
-          </div>
-      </div>
-      
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-          <div class="card">
-              <img src="../img/cards-productos/pinguino.jpg" class="card-img-top" alt="Card Image">
-              <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Pinguinos</h5>
-                  <p class="card-text mb-4">
-                  <ul>
-                      <b><li>$800</li></b>
-                      <li>80 grs</li>
-                  </ul>
-                  </p>
-              
-              </div>
-          </div>
-      </div>
-     </div>
-  </div>
-  <br>
-  <a href="../Vistas/productos.html" class="btn mt-auto"
-   style="background-color: #CE0F69; color: white;">Añadir más productos</a>
-</div>    
 
 
 

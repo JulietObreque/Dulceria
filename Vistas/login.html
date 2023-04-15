@@ -22,7 +22,171 @@
     <title>Cherry Vine</title>
 </head>
 
-<body class="bodylogin">
+<body class="bodylogin"><!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Yeseva+One&display=swap"
+                rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="icon" href="../img/icono.png">
+        <title>𝐂𝐡𝐞𝐫𝐫𝐲 𝐯𝐢𝐧𝐞</title>
+    </head>
+    
+    <body class="bodylogin">
+    
+      <header>
+        <div class="container mt-3">
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center fixed-top"
+            style="background-color: #EF3340; padding-left: 2%;">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../img/Logo1.png" width="60px" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#ancla-nosotros">Quienes somos</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ancla-contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </header>
+    
+    <div class="container">
+      <div class="row content d-flex justify-content-center " >
+          <div class="col-md-5 pt-1 pb-5">
+              <div class="box shadow bg-white p-4">
+                  <form action="/action_page.php">
+    
+                      <div class="mb-3 mt-3 md-3 text-center">
+                          <label for="email" class="form-label">Correo:</label>
+                          <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo"
+                              name="email">
+                      </div>
+    
+                      <div class="mb-3 text-center">
+                          <label for="pwd" class="form-label">Contraseña:</label>
+                          <input type="password" class="form-control" id="contraseña" placeholder="Ingrese su contraseña"
+                              name="pswd">
+                      </div>
+    
+                      <div class="form-group mx-sm-4 text-right">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal" style="color: #CE0F69;">
+                            Olvidé mi contraseña
+                          </button>
+                      </div>
+    
+                      <div class="form-check mb-3 text-center">
+                          <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" name="recuerdame"> Recuerdame
+                          </label>
+                      </div>
+    
+                      <a href="perfil.html" class="btn btn-success btn-primary btn-sm btn-block" style="background-color:  #343434; border-color: #343434;">Entrar</a>
+                      <a href="registro.html" class="btn btn-success btn-primary btn-sm btn-block" style="background-color:  #343434; border-color: #343434;">Registrarme</a>
+                        
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Te enviaremos un correo electrónico para reestablecer tu contraseña</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type="email" class="form-control" placeholder="example@gmail.com">
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: #CE0F69;">Enviar</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    
+     
+     
+    <footer class="contenedor-footer">
+        <a name="ancla-contacto"></a>
+        <div class="footer-basic">
+            <footer>
+                <h3 class="titulo-footer">Contacto</h3>
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                            class="icon ion-social-whatsapp"></i></a><a href="#"><i
+                            class="icon ion-social-twitter"></i></a><a href="#"><i
+                            class="icon ion-social-facebook"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Services</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="copyright">Cherry Vine © 2023</p>
+            </footer>
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
 
   <header>
     <div class="container mt-3">

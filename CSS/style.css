@@ -3,6 +3,23 @@
     background-repeat: no-repeat;
     background-size: fixed;
 }
+#tablaComments{
+    background-color: #FFF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.label-n{
+    font-weight: 500;
+}
+label.error{
+    color: #EF3340;
+}
+input.error, select, textarea{
+    border: 1px solid #EF3340
+}
 
 .olvide{
     color: #CE0F69;
@@ -457,8 +474,6 @@ section {
     float: left;
 }
 
-
-
 .contenedor-footer {
     background-color: #EF3340;
     color: white;
@@ -466,6 +481,7 @@ section {
     padding-left: 2%;
     padding-bottom: 1%;
     float: left;
+
 }
 
 .titulo-footer {
@@ -486,6 +502,7 @@ section {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0;
+
 }
 
 .footer-basic li {

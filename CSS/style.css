@@ -270,6 +270,8 @@ section {
     float: left;
 }
 
+
+
 .contenedor-footer {
     background-color: #EF3340;
     color: white;
@@ -1118,3 +1120,10 @@ section {
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+
+#titulo-carrito{
+    text-align: center;
+    
+}

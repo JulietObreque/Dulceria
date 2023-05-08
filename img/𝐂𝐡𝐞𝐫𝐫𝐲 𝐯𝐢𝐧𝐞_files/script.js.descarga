@@ -1,0 +1,27 @@
+const formulario = document.querySelector('#formulario');
+const mensaje = document.querySelector('#mensaje');
+
+formulario.addEventListener('submit', (evento) => {
+  evento.preventDefault();
+
+  
+
+  const correo = document.querySelector('#correo').value.trim();
+  const contraseña= document.querySelector('#contraslea').value.trim();
+  const ciudad = document.querySelector('#ciudad').value.trim();
+
+  const expresionRegularCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const expresionRegularContraseña =/^(?=.*\d)(?=.*[a-z])(?=.^[A-Z]).{8,}$/;
+  if (!expresionRegularContraseña.test(contraseña)) {
+    mensaje.textContent = 'contraseña inválida';
+  } else if (ciudad === '') {
+    mensaje.textContent = 'Por favor ingrese su ciudad de residencia';
+  } else if (!expresionRegularCorreo.test(correo)) {
+    mensaje.textContent = 'Por favor ingrese un correo electrónico válido';
+  } else {
+    mensaje.textContent = 'Registro exitoso';
+    formulario.reset();
+  }
+});
+
+

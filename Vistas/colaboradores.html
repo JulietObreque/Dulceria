@@ -11,8 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
@@ -45,6 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#ancla-nosotros">Quienes somos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Vistas/foro.html">Foro</a>
+                          </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#ancla-contacto">Contacto</a>
@@ -71,18 +72,28 @@
         <br>
         <p>En Cherry Vine estamos comprometidos con el bienestar y la salud de las personas, es por ello que participamos activamente en campañas de conscientización, recaudación de fondos y apadrinamiento de casos en apoyo a la lucha contra la Diabetes. <br> <h5>Te invitamos a ser parte de este proceso:</h5></p>
         <br>
-        <form>
+        <form id="colaborador-form">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputNombre" class="label-n">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="inputApellido" class="label-n">Apellido</label>
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="apellido">
+                </div>
+            </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <label for="inputEmail4" class="label-n">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="correo">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="inputState">Región</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Seleccionar...</option>
+                    <label for="inputState" class="label-n">Región</label>
+                    <select id="inputState" class="form-select" name="region">
+                        <option selected disable value = ""> Seleccionar...</option>
                         <option value="1">Arica y Parinacota</option>
                         <option value="2">Tarapacá</option>
                         <option value="3">Antofagasta</option>
@@ -102,55 +113,30 @@
                     </select>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputCity">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="inputCity" class="label-n">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity" name="ciudad">
+                    <div class="valid-feedback"></div>
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="inputZip">Código Postal</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="inputZip" class="label-n">C. Postal</label>
+                    <input type="number" class="form-control" id="inputZip" name="cpostal">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputAddress">Dirección</label>
+                <label for="inputAddress" class="label-n">Dirección</label>
                 <input type="text" class="form-control" id="inputAddress"
-                    placeholder="Ej. 7 Nte. 489 Viña del Mar, Valparaíso">
+                    placeholder="Ej. 7 Nte. 489 Viña del Mar, Valparaíso" name="direccion">
             </div>
             <div class="form-group">
-                <label for="inputAddress2">Casa/Departamento</label>
+                <label for="inputAddress2" class="label-n">Casa/Departamento</label>
                 <input type="text" class="form-control" id="inputAddress2"
-                    placeholder="Ej. Condominio Los Aromos, Torre A, departamento 21">
+                    placeholder="Ej. Condominio Los Aromos, Torre A, departamento 21" name="direccion2">
             </div>
-            </div>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal" style="background-color: #CE0F69; color: white;">Registrarme</button>
+            <button type="submit" id="registrarme" class="btn" style="background-color: #CE0F69; color: white;">Registrarme</button>
+            </div>  
         </form>
     </section>
-      
-      <!-- The Modal -->
-      <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-      
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Registro exitoso!</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-      
-            <!-- Modal body -->
-            <div class="modal-body">
-              Muchas gracias por querer ser parte de este increíble proyecto, estaremos en contacto contigo a través de correo electrónico.
-            </div>
-      
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-      
-          </div>
-        </div>
-      </div>
-    <br>
     <!-- Footer -->
     <footer class="contenedor-footer">
         <a name="ancla-contacto"></a>
@@ -162,9 +148,7 @@
                             class="icon ion-social-twitter"></i></a><a href="#"><i
                             class="icon ion-social-facebook"></i></a></div>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="index.html">Home</a></li>
                     <li class="list-inline-item"><a href="#">Services</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
                     <li class="list-inline-item"><a href="#">Terms</a></li>
                     <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                 </ul>
@@ -187,6 +171,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="../JS/script.js"></script>
 </body>
 
 </html>

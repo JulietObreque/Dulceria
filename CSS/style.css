@@ -3,7 +3,23 @@
     background-repeat: no-repeat;
     background-size: fixed;
 }
-
+#tablaComments{
+    background-color: #FFF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.label-n{
+    font-weight: 500;
+}
+label.error{
+    color: #EF3340;
+}
+input.error, select, textarea{
+    border: 1px solid #EF3340
+}
 
 .olvide{
     color: #CE0F69;
@@ -340,6 +356,10 @@
 body {
     background-color: #FDEBEC;
 }
+#carrusel{
+    width: 100%;
+    padding: 0%;
+}
 
 section {
     padding-left: 15%;
@@ -463,6 +483,7 @@ section {
     padding-left: 2%;
     padding-bottom: 1%;
     float: left;
+
 }
 
 .titulo-footer {
@@ -483,6 +504,7 @@ section {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0;
+
 }
 
 .footer-basic li {
@@ -532,14 +554,14 @@ section {
 
 .p-section {
     background: #FDEBEC;
-    overflow-x: hidden;
-    padding-left: 0%;
+    overflow: visible;
     height: 100vh;
 }
 .side-nav{
     color: white;
     width: 25%;
     float: left;
+    height: 100vh;
 }
 .box-cards{
     width: 75%;
@@ -1046,10 +1068,9 @@ section {
         position: absolute;
         bottom: 0px;
         left: 0;
-        background: #e67e22;
+        background: #EF3340;
         color: #FFF;
         min-width: 100%;
-        text-transform: lowercase;
         font-weight: normal;
         text-align: center;
     }
@@ -1082,14 +1103,14 @@ section {
         left: 35px;
         top: 45px;
         border: 0;
-        border-top: 4px solid #e67e22;
+        border-top: 4px solid #EF3340;
     }
 
     .mcd-menu li ul li ul li>ul:before {
         left: 30px;
         top: -9px;
         border: 0;
-        border-bottom: 5px solid #e67e22;
+        border-bottom: 5px solid #EF3340;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
     }
@@ -1137,10 +1158,9 @@ section {
         position: absolute;
         bottom: 0px;
         left: 0;
-        background: #e67e22;
+        background: #EF3340;
         color: #FFF;
         min-width: 100%;
-        text-transform: lowercase;
         font-weight: normal;
         text-align: center;
     }
@@ -1304,6 +1324,7 @@ section {
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
 
 
 

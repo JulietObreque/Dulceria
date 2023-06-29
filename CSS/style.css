@@ -1228,3 +1228,89 @@ section {
     text-align: center;
     
 }
+
+/* ---------Foro---------- */
+.testimonios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.testimonios-header{
+    margin: 50px 0 px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.t-Testimonios{
+    font-size: 1.8rem;
+    justify-content: center;
+    font-weight: 500;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+.testimonios-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonios-caja{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.perfil-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+.perfil-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1,3rem;
+}
+.name-user span{
+    color: #979797;
+    font-size: 1.1rem;
+}
+.reseñas{
+    color: #f9d71c;
+}
+.caja-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.comentarios-clientes{
+    color: #4b4b4b;
+}
+::selection{
+    color: white;
+    background-color:#EF3340;
+}
+

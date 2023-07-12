@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <link rel="icon" href="{% static 'img/icono.png' %}">
+    <link rel="stylesheet" href="{% static 'tienda/CSS/style.css' %}">
+    <link rel="icon" href="{% static 'tienda/img/icono.png' %}">
     <title>𝐂𝐡𝐞𝐫𝐫𝐲 𝐯𝐢𝐧𝐞</title>
 </head>
 
@@ -33,7 +33,7 @@
         </div>
         <nav class="navbar navbar-expand-sm navbar-dark justify-content-center fixed-top" style="background-color: #EF3340; padding-left: 2%;">
             <div class="container-fluid">
-                <a href="{% url 'index'%}"><img src="{% static 'img/Logo1.png' %}" width="60px" alt="logo"></a>
+                <a href="{% url 'index'%}"><img src="{% static 'tienda/img/Logo1.png' %}" width="60px" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,7 +46,7 @@
                             <a class="nav-link" href="#ancla-nosotros">Quienes somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Foro</a>
+                            <a class="nav-link" href="{% url 'foro'%}">Foro</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#ancla-contacto">Contacto</a>
@@ -62,14 +62,14 @@
                             {% endif %}
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Vistas/carrito.html"><i class="fa-solid fa-cart-shopping"
+                            <a class="nav-link" href="{% url 'carrito'%}"><i class="fa-solid fa-cart-shopping"
                                     style="color: #ffffff;"></i></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login-emp'%}"><i class="fas fa-user"></i> {{ user.username }}</a>
+                            <a class="nav-link" href="{% url 'login-perfil'%}"><i class="fas fa-user"></i> {{ user.username }}</a>
                         </li>
                         {% endif %}
                     </ul>
@@ -80,13 +80,21 @@
     <div>
         <nav class="navbar navbar-expand-sm justify-content-center">
             <div class="container-fluid justify-content-center">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Encuentra tu producto">
-                    <button class="btn" style="background-color: #CE0F69; color: white;" type="button">Buscar</button>
-                </form>
+                <form class="d-flex" method="GET">
+                    <input class="form-control me-2" type="text" placeholder="Buscar por nombre" name="buscar">
+                    <select class="form-select me-2" name="seleccionar">
+                        <option value="">Seleccione una categoria</option>
+                        <option value="">Mostrar todos</option>
+                        <option value="1">Dulce</option>
+                        <option value="2">Salado</option>
+                        <option value="3">Exportación</option>
+                        <option value="4">Boxes</option>
+                        <option value="5">Packs</option>
+                    </select>
+                    <button class="btn" style="background-color: #CE0F69; color: white;" type="submit">Buscar</button>
+                </form>  
             </div>
-    </div>
-    </nav>
+        </nav>
     </div>
     <section class="p-section">
         <div class="container">
@@ -164,7 +172,7 @@
                 <div>
                     <div class="row">
                         <!--ADD CLASSES HERE d-flex align-items-stretch-->
-                        {% for p in productos%}
+                        {% for p in entity%}
                 <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                     <div class="card">
                         {% if p.imagen%}
@@ -186,8 +194,12 @@
                 </div>
                 {% endfor%}
                 </div>
+                <div>
+                    {% include 'tienda/Vistas/paginator.html'%}
+                </div>
             </div>
         </div>
+
     </section>
     <br>
     <footer class="contenedor-footer">

@@ -472,6 +472,7 @@ section {
 
 .mas-vendidos {
     float: left;
+    padding-top: 200px;
 }
 
 
@@ -483,8 +484,6 @@ section {
     padding-left: 2%;
     padding-bottom: 1%;
     float: left;
-    position: fixed;
-    bottom: 0;
 
 }
 
@@ -1314,4 +1313,89 @@ section {
 ::selection{
     color: white;
     background-color:#EF3340;
+}
+
+.container-reg {
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 500px;
+    margin: 0 auto
+}
+
+.header-reg {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 20px 40px;
+}
+
+.header-reg h2 {
+	margin: 0;
+}
+
+.forma {
+	padding: 30px 40px;	
+}
+
+.form {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form.success input {
+	border-color: #2ecc71;
+}
+
+.form.error input {
+	border-color: #e74c3c;
+}
+
+
+
+
+.form small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form.error small {
+	visibility: visible;
+}
+
+.forma button {
+	background-color: #CE0F69;
+	border: 2px solid #CE0F69;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
 }

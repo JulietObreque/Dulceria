@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <link rel="icon" href="{% static 'img/icono.png' %}">
+    <link rel="stylesheet" href="{% static 'tienda/CSS/style.css' %}">
+    <link rel="icon" href="{% static 'tienda/img/icono.png' %}">
     <title>𝐂𝐡𝐞𝐫𝐫𝐲 𝐯𝐢𝐧𝐞</title>
 </head>
 
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark justify-content-center fixed-top"
         style="background-color: #EF3340; padding-left: 2%;">
         <div class="container-fluid">
-            <a href="{% url 'index'%}"><img src="{% static 'img/Logo1.png' %}" width="60px" alt="logo"></a>
+            <a href="{% url 'index'%}"><img src="{% static 'tienda/img/Logo1.png' %}" width="60px" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
                         <a class="nav-link" href="../index.html#ancla-nosotros">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Vistas/foro.html">Foro</a>
+                        <a class="nav-link" href="{% url 'foro'%}">Foro</a>
                       </li>
                     </li>
                     <li class="nav-item">
@@ -61,14 +61,14 @@
                     </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="carrito.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    <a class="nav-link" href="{% url 'carrito'%}"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
   </header>
-
+{% load crispy_forms_tags%}
 <div class="container">
   <div class="row content d-flex justify-content-center " >
       <div class="col-md-5 pt-1 pb-5">
@@ -77,14 +77,14 @@
             <br>
             <form method="post">
               {% csrf_token %}
-              {{ form.as_p }}
+              {{ form | crispy }}
               <div class="form-group mx-sm-4 text-right">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal" style="color: #CE0F69;">
                     Olvidé mi contraseña
                   </button>
               </div>
               <button type="submit" class="btn btn-success btn-primary btn-sm btn-block" style="background-color:  #343434; border-color: #343434;">Iniciar sesión</button>
-                  <a href="registro.html" class="btn btn-success btn-primary btn-sm btn-block" style="background-color:  #343434; border-color: #343434;">Registrarme</a>
+                  <a href="{% url 'registro'%}" class="btn btn-success btn-primary btn-sm btn-block" style="background-color:  #343434; border-color: #343434;">Registrarme</a>
             </form>
           </div>
       </div>
@@ -115,7 +115,10 @@
     </div>
   </div>
 
- 
+<br>
+<br>
+<br>
+<br>
  
 <footer class="contenedor-footer">
     <a name="ancla-contacto"></a>

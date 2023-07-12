@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <link rel="icon" href="{% static 'img/icono.png' %}">
+    <link rel="stylesheet" href="{% static 'tienda/CSS/style.css' %}">
+    <link rel="icon" href="{% static 'tienda/img/icono.png' %}">
     <title>𝐂𝐡𝐞𝐫𝐫𝐲 𝐯𝐢𝐧𝐞</title>
 </head>
 
@@ -31,7 +31,7 @@
         </div>
         <nav class="navbar navbar-expand-sm navbar-dark justify-content-center fixed-top" style="background-color: #EF3340; padding-left: 2%;">
     <div class="container-fluid">
-        <a href="{% url 'index'%}"><img src="{% static 'img/Logo1.png' %}" width="60px" alt="logo"></a>
+        <a href="{% url 'index'%}"><img src="{% static 'tienda/img/Logo1.png' %}" width="60px" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@
                     <a class="nav-link" href="#ancla-nosotros">Quienes somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Foro</a>
+                    <a class="nav-link" href="{% url 'foro'%}">Foro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#ancla-contacto">Contacto</a>
@@ -60,14 +60,14 @@
                     {% endif %}
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Vistas/carrito.html"><i class="fa-solid fa-cart-shopping"
+                    <a class="nav-link" href="{% url 'carrito'%}"><i class="fa-solid fa-cart-shopping"
                             style="color: #ffffff;"></i></a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login-emp'%}"><i class="fas fa-user"></i> {{ user.username }}</a>
+                    <a class="nav-link" href="{% url 'login-perfil'%}"><i class="fas fa-user"></i> {{ user.username }}</a>
                 </li>
                 {% endif %}
             </ul>
@@ -89,17 +89,17 @@
                     <!-- The slideshow/carousel -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{% static 'img/Banner.png'%}" alt="Carrusel1" class="d-block" style="width:100%">
+                            <img src="{% static 'tienda/img/Banner.png'%}" alt="Carrusel1" class="d-block" style="width:100%">
                             <div class="carousel-caption">
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'img/Banner2.png'%}" alt="Carrusel2" class="d-block" style="width:100%">
+                            <img src="{% static 'tienda/img/Banner2.png'%}" alt="Carrusel2" class="d-block" style="width:100%">
                             <div class="carousel-caption">
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'img/Banner3.png'%}" alt="Carrusel3" class="d-block" style="width:100%">
+                            <img src="{% static 'tienda/img/Banner3.png'%}" alt="Carrusel3" class="d-block" style="width:100%">
                             <div class="carousel-caption">
                             </div>
                         </div>
@@ -132,7 +132,7 @@
         <div class="us">
             <div class="row-us">
                 <div class="left">
-                    <img src="{% static 'img/us.jpg'%}" alt="Nosotros">
+                    <img src="{% static 'tienda/img/us.jpg'%}" alt="Nosotros">
                 </div>
                 <div class="right">
                     <div class="content-us">
@@ -153,13 +153,12 @@
                             Juvenil
                             de Chile</a>. <br>
                         <h5>¿Te gustaría ser parte de nuestro equipo de colaboradores?</h5>
-                        <a href="Vistas/colaboradores.html" class="btn mt-auto align-self-start"
+                        <a href="{% url 'colaboradores'%}" class="btn mt-auto align-self-start"
                             style="background-color: #CE0F69; color: white;">Ir al formulario</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
 
         <!-- Los mas vendidos con Cards -->
         <div class="mas-vendidos">
@@ -192,6 +191,10 @@
                 </div>
                 {% endfor%}
             </div>
+            <div>
+                <br>
+                <br>
+            </div>
         </div>
     </section>
     <!-- Footer -->
@@ -210,7 +213,8 @@
                     <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                 </ul>
                 <p class="copyright">Cherry Vine © 2023</p></footer>
-        </div></footer>
+        </div>
+    </footer>
 
 
 

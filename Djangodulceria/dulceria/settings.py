@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -75,7 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'dulceria.wsgi.application'
-LOGIN_REDIRECT_URL = "index"
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -122,7 +125,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# Otras importaciones de módulos
+
+import os
+
+# Configuración de la base de datos, middleware y otras opciones
+
+# Configuración de archivos estáticos
+STATIC_URL = '/static/'
+
+
+
+
+
+
 
 import os
 MEDIA_URL = '/media/'

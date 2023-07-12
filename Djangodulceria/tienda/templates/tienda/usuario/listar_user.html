@@ -16,14 +16,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-<link rel="icon" href="{% static 'img/icono.png' %}">
+<link rel="stylesheet" href="{% static 'tienda/CSS/style.css' %}">
+<link rel="icon" href="{% static 'tienda/img/icono.png' %}">
     <title>Lista de Usuarios</title>
 </head>
 <body>
     <section class="container">
         <div class="table-hover table-responsive mt-5">
             <h2>Lista de Usuarios</h2>
+            <nav class="navbar navbar-expand-sm justify-content-center">
+                <div class="container-fluid justify-content-center">
+                    <form class="d-flex" method="GET">
+                        <input class="form-control me-2" type="text" placeholder="Buscar por nombre" name="buscar">
+                        <select class="form-select me-2" name="seleccionar">
+                            <option value="">Seleccione una categoria</option>
+                            <option value="">Mostrar todos</option>
+                            <option value="1">Empleado</option>
+                            <option value="2">Cliente</option>
+                        </select>
+                        <button class="btn" style="background-color: #CE0F69; color: white;" type="submit">Buscar</button>
+                    </form>  
+                </div>
+            </nav>
             <br>
             <a href="{% url 'agregar-user'%}" class="btn" style="background-color: #0a0908; color: white;">Agregar usuario</a>
             <br>
@@ -39,7 +53,7 @@
                     <th></th>
                     <th>Opciones</th>
                 </tr>
-                {% for p in usuarios %}
+                {% for p in entity %}
                 <tr>
                     <td>{{p.nombre}}</td>
                     <td>{{p.apellidos}}</td>
@@ -48,12 +62,46 @@
                     <td>{{p.telefono}}</td>
                     <td>{{p.rol}}</td>
                     <td><a href="{% url 'modificar-user' p.id %}" class="btn" style="background-color: #efc3e6; color: black;">Modificar</a></td>
-                    <td><a href="{% url 'eliminar-user' p.id %}" class="btn" style="background-color: #CE0F69; color: white;">Eliminar</a></td>
+                    <td><a href="#" onclick="eliminarUsuario({{ p.id }})" class="btn" style="background-color: #CE0F69; color: white;">Eliminar</a></td>
                 </tr>
                 {% endfor %}
              </table>
-             <a href="{% url 'login-emp'%}" class="btn" style="background-color: #efc3e6; color: black;">Volver</a>
+             <a href="{% url 'login-perfil'%}" class="btn" style="background-color: #efc3e6; color: black;">Volver</a>
+    </div>
+    <div>
+        {% include 'tienda/Vistas/paginator.html'%}
     </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "text": "{{m}}",
+                    "icon":"success"
+                })
+            </script>
+        {% endfor %}
+    {% endif %}
+    <script>
+        function eliminarUsuario(id) {
+            Swal.fire({
+                "title": "¿Está seguro de que desea eliminar este usuario?",
+                "text": "Esta acción no se puede deshacer",
+                "icon": "question",
+                "showCancelButton":true,
+                "cancelButtonText": "Cancelar",
+                "confirmButtonText": "Eliminar",
+                "reverseButtons":true,
+                "confirmButtonColor": "#dc3545"
+            })
+            .then(function(result) {
+                if(result.isConfirmed){
+                    window.location.href = "/eliminar-user/"+id+"/"
+                }
+            })
+        }
+    </script>
 </body>
 </html>
